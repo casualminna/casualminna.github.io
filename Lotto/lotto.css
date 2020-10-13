@@ -1,0 +1,125 @@
+body {
+  position: relative;
+  text-align: center;
+  background-color:black;
+  color: white;
+
+}
+
+/*CONTAINER*/
+.container {
+  margin: auto;
+  border:1px solid gold;
+  border-radius: 5px;
+  width: 700px;
+  height: 500px;
+  color: gold;
+}
+
+
+/* CHECKBOXES*/
+label {
+    position:relative;
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    display:none; /* use your custom sprites instead as background on the span */
+}
+input[type="checkbox"] + label{
+    display:inline-block;
+    padding:1em;
+    width: 20px;
+    height: 20px;
+    font-size: 28px;
+    border: solid 1px rgba(242, 84, 73,1) ;
+}
+input:checked + label {
+  background-color: red;
+}
+
+/*TEXTS*/
+.wrapper {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+}
+.txt {
+    color: #ffffff;
+    background:#000000;
+    font-size:100px;
+    font-weight: bold;
+    font-family: Arial;
+    text-transform: uppercase;
+}
+.txt::before {
+    content: 'LOTTO MASIINA';
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(3px);
+}
+.neon-wrapper {
+    display:inline-flex;
+    filter: brightness(200%);
+    overflow: hidden;
+}
+.gradient{
+    background: linear-gradient(89.93576709023569deg, rgba(242, 84, 73,1) 18.354166666666668%,rgba(242, 84, 72,1) 18.354166666666668%,rgba(255, 213, 0,1) 80.29861111111111%);
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    mix-blend-mode: multiply;
+}
+.dodge {
+    background: radial-gradient(circle,white,black 35%) center / 25% 25%;
+    position: absolute;
+    top:-100%;
+    left:-100%;
+    right:0;
+    bottom:0;
+    mix-blend-mode: color-dodge;
+    animation: dodge-area 3s linear infinite;
+}
+@keyframes dodge-area {
+    to {
+        transform: translate(50%,50%);
+    }
+}
+.wrapper2 {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+}
+.txt2 {
+    color: #ffffff;
+    background:#000000;
+    font-size:80px;
+    font-weight: bold;
+    font-family: Arial;
+    text-transform: uppercase;
+}
+.txt2::before {
+    content: 'VALITSE KUUSI NUMEROA';
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(3px);
+}
+.neon-wrapper2 {
+    display:inline-flex;
+    filter: brightness(200%);
+    overflow: hidden;
+}
+.gradient2{
+    background:  linear-gradient(89.93576709023569deg, rgba(242, 84, 73,1) 18.354166666666668%,rgba(242, 84, 72,1) 18.354166666666668%,rgba(255, 213, 0,1) 80.29861111111111%);
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    mix-blend-mode: multiply;
+}
