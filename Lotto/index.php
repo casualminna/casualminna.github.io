@@ -9,5 +9,6 @@
 </head>
 <body>
 <h2>This is lottery</h2>
+<<?php include ("lotto.php"); ?>
 </body>
 </html>
