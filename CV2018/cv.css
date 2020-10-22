@@ -1,0 +1,413 @@
+/*
+Theme Name: My CV
+Author: Minna Nurminen
+Description: Style for my CV
+Version: 0.1.2
+*/
+
+body {
+  background-image: url(background.jpg);
+  background-size: 170px;
+  background-repeat: repeat;
+  text-align: center;
+  cursor: default;
+}
+
+/*GRID SETTINGS*/
+
+.grid {
+  height: auto;
+  width: 900px;
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border: 4px solid #ff5454;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+  grid-template-areas:
+  'image intro intro intro'
+  'summary summary summary summary'
+  'skills skills skills skills'
+  'languages skill skill skill'
+  'experience experience experience experience'
+  'education education work work'
+  'more more contacts contacts'
+  'recommendation recommendation recommendation recommendation';
+}
+.image {grid-area: image;}.intro {grid-area: intro;}.summary {grid-area: summary;}.contacts {grid-area: contacts;}
+.skills {grid-area: skills;}.experience {grid-area: experience;}.recommendation {grid-area: recommendation;}.more {grid-area: more;}
+.languages {grid-area: languages;} .skill {grid-area: skill;} .education {grid-area: education;} .work {grid-area: work;}
+
+
+/*PHOTO*/
+.cv_photo {
+  display: inline-block;
+  width: 250px;
+  height: 224px;
+  margin-top: 10px;
+  background: transparent url(cv_photo.png) no-repeat 0 0;
+  background-size: 250px 224px;
+  z-index: 99;
+}
+.cv_photo:hover {
+  display: inline-block;
+  width: 250px;
+  height: 224px;
+  background: transparent url(cv_photo2.png) no-repeat 0 0;
+  background-size: 250px 224px;
+  cursor: default;
+}
+
+
+/*TEXT FONTS*/
+h1 {
+  color: #E05263;
+  font-family: 'Caveat Brush', sans-serif;
+  font-size: 85px;
+  margin-bottom: 0;
+}
+h2, h3 {
+  color: #fb6868;
+  font-size: 50px;
+  font-family: 'Caveat Brush', sans-serif;
+}
+h4 {
+  color: #fff;
+  font-family: 'Caveat Brush', sans-serif;
+}
+h5 {
+  color: #ff5454;
+  font-family: 'Caveat Brush', sans-serif;
+  margin: 0;
+  font-size: 30px;
+}
+p {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+}
+i {
+  color: #E05263;
+}
+
+.intro p {
+  font-size: 25px;
+  margin-top: 0;
+}
+.summary h3 {
+  margin: 8px 0px 5px 0px;
+}
+.skills h2 {
+  margin-bottom: 20px;
+}
+.experience h2 {
+  margin-top: 60px;
+}
+.contacts h3, .more h3 {
+  margin-top: 70px;
+  margin-bottom: 18px;
+}
+.recommendation h3 {
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+/*CIRCLES*/
+.FINcircle, .ENGcircle, .SWEcircle, .HTMLCSS, .UIUXcircle, .WordPresscircle,.USERcircle, .SOMEcircle, .Contentcircle {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+
+  /* final touches */
+  @shadow: rgba(0, 0, 0, .1);
+  @shadow-length: 4px;
+  -webkit-box-shadow: 0 @shadow-length 0 0 @shadow;
+  box-shadow: 0 @shadow-length 0 0 @shadow;
+  text-shadow: 0 @shadow-length 0 @shadow;
+  background-color: red;
+  text-align: center;
+
+  /* animation */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-duration: 1s;
+}
+
+
+/*LANGUAGES*/
+.languages {
+  position: relative;
+  height: 200px;
+  width: auto;
+}
+.FINcircle {
+  background-color: transparent;
+  width: 130px;
+  height: 130px;
+  font-size: 40px;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  -webkit-animation-name: FIN; /* Safari 4.0 - 8.0 */
+  animation-name: FIN;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+}
+.FINcircle h4 {
+  margin-top: 40px;
+}
+.ENGcircle {
+  background-color: transparent;
+  width: 115px;
+  height: 115px;
+  font-size: 35px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -webkit-animation-name: ENG; /* Safari 4.0 - 8.0 */
+  animation-name: ENG;
+  animation-delay: 2.4s;
+  animation-fill-mode: forwards;
+}
+.ENGcircle h4 {
+  margin-top: 35px;
+}
+.SWEcircle {
+  background-color: transparent;
+  width: 75px;
+  height: 75px;
+  font-size: 20px;
+  position: absolute;
+  top: 55%;
+  left: 57%;
+  -webkit-animation-name: SWE; /* Safari 4.0 - 8.0 */
+  animation-name: SWE;
+  animation-delay: 3.2s;
+  animation-fill-mode: forwards;
+}
+
+/* language animations */
+@keyframes FIN {
+  from {background-color: transparent;}
+  to {background-color:  #ef6060;}
+}
+@keyframes ENG {
+  from {background-color: transparent;}
+  to {background-color: #f03434;}
+}
+@keyframes SWE {
+  from {background-color: transparent;}
+  to {background-color:  #ff9e9d;}
+}
+
+
+
+/*SKILLS*/
+.skill {
+  position: relative;
+  height: 200px;
+  width: 600px;
+}
+.HTMLCSS  {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  font-size: 30px;
+  position: absolute;
+  top: 11%;
+  left: 7%;
+  -webkit-animation-name: HTML; /* Safari 4.0 - 8.0 */
+  animation-name: HTML;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.HTMLCSS h4 {
+  line-height: 30px;
+  margin-top: 32px;
+}
+.UIUXcircle {
+  background-color: transparent;
+  width: 130px;
+  height: 130px;
+  font-size: 30px;
+  position: absolute;
+  top: 0%;
+  left: 27%;
+  -webkit-animation-name: UIUX; /* Safari 4.0 - 8.0 */
+  animation-name: UIUX;
+  animation-delay: 2.4s;
+  animation-fill-mode: forwards;
+}
+.WordPresscircle {
+  background-color: transparent;
+  width: 120px;
+  height: 120px;
+  font-size: 20px;
+  position: absolute;
+  top: 45%;
+  left: 28%;
+  -webkit-animation-name: WP; /* Safari 4.0 - 8.0 */
+  animation-name: WP;
+  animation-delay: 1.6s;
+  animation-fill-mode: forwards;
+}
+.WordPresscircle h4 {
+  margin-top:45px;
+}
+.SOMEcircle {
+  background-color: transparent;
+  width: 160px;
+  height: 160px;
+  font-size: 40px;
+  position: absolute;
+  top: 15%;
+  left: 44%;
+  -webkit-animation-name: SOME; /* Safari 4.0 - 8.0 */
+  animation-name: SOME;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+}
+.USERcircle {
+  background-color: transparent;
+  width: 135px;
+  height: 135px;
+  font-size: 22px;
+  position: absolute;
+  top: 0%;
+  right: 13%;
+  -webkit-animation-name: USER; /* Safari 4.0 - 8.0 */
+  animation-name: USER;
+  animation-delay: 3.2s;
+  animation-fill-mode: forwards;
+}
+.Contentcircle {
+  background-color: transparent;
+  width: 130px;
+  height: 130px;
+  font-size: 25px;
+  position: absolute;
+  top: 30%;
+  right: -2%;
+  -webkit-animation-name: Content; /* Safari 4.0 - 8.0 */
+  animation-name: Content;
+  animation-delay: 2.8s;
+  animation-fill-mode: forwards;
+}
+
+/* Skill animations */
+@keyframes HTML {
+  from {background-color: transparent;}
+  to {background-color: #f03434;}
+}
+@keyframes UIUX {
+  from {background-color: transparent;}
+  to {background-color: #ef6060;}
+}
+@keyframes WP {
+  from {background-color: transparent;}
+  to {background-color: #ffabab;}
+}
+@keyframes SOME {
+  from {background-color: transparent;}
+  to {background-color: #f04646;}
+}
+@keyframes USER {
+  from {background-color: transparent;}
+  to {background-color: #ffc1c1;}
+}
+@keyframes Content {
+  from {background-color: transparent;}
+  to {background-color:  #ff7e7e;}
+}
+
+/* EXPERIENCE */
+
+.education {
+  border-right: 2px solid #ff5454;
+}
+.education, .work {
+  width: 450px;
+  height:auto;
+}
+.education i, .work i {
+  font-size: 30px;
+}
+#HaagaHide, #MetropoliaHide, #IffOldHide, #IffNewHide {
+  display: none;
+}
+
+h5:hover {
+  cursor: pointer;
+}
+
+/*lines*/
+.education hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid #ff5454;
+    width: 35%;
+    margin-right: 0;
+    text-align: right;
+}
+.work hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid #ff5454;
+    width: 35%;
+    margin-left: 0;
+    text-align: left;
+}
+
+/* MORE */
+.more i {
+  padding: 0 30px 0 30px;
+  font-size: 25px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  min-width: 120px;
+  background-color: rgb(255, 84, 84, 0.7);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-family: 'Montserrat';
+
+  /* Position the tooltip */
+  position: absolute;
+  top: 180%;
+  left: -20%;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* LINKS */
+a {
+  color: #000;
+  text-decoration: none;
+}
+p.mail {
+  margin-top: 0;
+  transition: transform .2s;
+}
+p.phone {
+  margin-bottom: 0;
+}
+p.mail:hover {
+  transform: scale(1.1);
+}
+i.fas.fa-video, i.fas.fa-book-open, i.fab.fa-linkedin-in, h5 {
+  transition: transform .2s;
+}
+.fas.fa-video:hover, i.fas.fa-book-open:hover, i.fab.fa-linkedin-in:hover, h5:hover {
+  transform: scale(1.2);
+}
